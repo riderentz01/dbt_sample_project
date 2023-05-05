@@ -39,7 +39,8 @@ nerdctl run --name postgres -p5432:5432 -e POSTGRES_USER=user -e POSTGRES_PASSWO
 ```
 
 Don't forget to create a "test" database!
-Next, create in your data warehouse, create data. Look at the set_up_scripts folder. Use the data_creation.sql file to do this (would need to tweak it depending on your warehouse, should work as is for postgres)
+
+Next - in your data warehouse, create data. Look at the set_up_scripts folder. Use the data_creation.sql file to do this (would need to tweak it depending on your warehouse, should work as is for postgres)
 
 ###pip install dependencies if using snowflake, instead of postgres below do: dbt-snowflake==1.2.0
 ```shell
