@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: DATABRICKS
+    database: DEV_HPFC
+    schema: DATABRICKS
+    freshness:
+      warn_after:
+        count: 30
+        period: day
+      error_after:
+        count: 60
+        period: day
+    loaded_at_field: "LOAD_DT"
+    tables:
+     - name: SALES
