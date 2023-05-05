@@ -1,0 +1,16 @@
+
+version: 2
+
+models:
+  - name: addition_view
+    description: "Add two numbers"
+    columns:
+      - name: "id"
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+      - name: "float_value"
+        description: "Carry-through of the float value"
+        tests:
+          - not_null
