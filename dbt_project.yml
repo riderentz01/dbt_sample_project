@@ -34,15 +34,12 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   mytestproject:
     # Config indicated by + and applies to all files under models/example/
-    example:
+    SALES:
       +materialized: view
-      +schema: example
-    testschema:
-      +schema: testschema
-    incremental:
+      +schema: SALES
+    ADHOC:
       +materialized: table
-    migrating:
-      +materialized: table
+
 
 tests:
   +store_failures: true
