@@ -1,18 +1,9 @@
 Welcome to your new dbt project!
 
-### Using the starter project
-
-Try running the following commands:
-- dbt run
-- dbt test
-
 ## Steps
 
 ### Get dbt configured on your computer
-You need to configure dbt or it won't know how to run. It adds profile files into your home directory.
-```shell
-dbt init mytestproject
-```
+
 
 Go to ~/.dbt/profiles.yml and configure the connections you intend to use. You can replace it with this to simplify things (you can set the threads to whatever you want):
 ```yaml
@@ -66,11 +57,15 @@ To run a specific subfolder of a specific model and a specific file in that fold
 ```shell
 dbt run -m testschema.string_stuff -s string_view
 ```
-
+```shell
+dbt run -s string_view
+```
 To run the Documentation, run these two commands:
 ```shell
 dbt docs generate
 dbt docs serve
+
+
 ### Resources:
 - Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
 - Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
