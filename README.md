@@ -37,12 +37,18 @@ mytestproject:
 ```shell
 nerdctl run --name postgres -p5432:5432 -e POSTGRES_USER=user -e POSTGRES_PASSWORD=password -d postgres:13.0
 ```
+
 Don't forget to create a "test" database!
+Next, create in your data warehouse, create data. Look at the set_up_scripts folder. Use the data_creation.sql file to do this (would need to tweak it depending on your warehouse, should work as is for postgres)
+
+###pip install dependencies if using snowflake, instead of postgres below do: dbt-snowflake==1.2.0
+```shell
+pip install dbt-core==1.2.0 dbt-postgres==1.2.0
+```
 
 ### Initiate the project
 You can start either from the prebuilt project, or build your own using the following:
 ```shell
-pip install -r requirements.txt
 dbt init mytestproject
 cd mytestproject  # The project isn't in the root based on how we created it.
 ```
@@ -55,8 +61,9 @@ dbt run -t prod
 
 To run a specific subfolder of a specific model and a specific file in that folder:
 ```shell
-dbt run -m testschema.string_stuff -s string_view
+dbt run -m ADHOC -s string_view
 ```
+Or you can run it like this
 ```shell
 dbt run -s string_view
 ```
