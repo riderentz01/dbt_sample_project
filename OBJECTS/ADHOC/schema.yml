@@ -6,6 +6,10 @@ models:
     description: "table migration example"
   - name: incremental_table.sql
     description: "incremental table example"
+  - name: string_view
+    description: "string example"
+  - name: date_view
+    description: "date example"
   - name: addition_view
     description: "Add two numbers"
     columns:
