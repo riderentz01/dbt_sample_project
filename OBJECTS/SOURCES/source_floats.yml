@@ -1,0 +1,18 @@
+version: 2
+
+sources:
+  - name: public
+    schema: public
+    tables:
+      - name: float_table
+        columns:
+          - name: id
+          - name: value
+            tests:
+              - not_null
+      - name: date_table
+        columns:
+          - name: id
+          - name: value
+            tests:
+              - unique
