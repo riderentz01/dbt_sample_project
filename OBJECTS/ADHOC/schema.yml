@@ -2,6 +2,10 @@
 version: 2
 
 models:
+  - name: migrating_table.sql
+    description: "table migration example"
+  - name: incremental_table.sql
+    description: "incremental table example"
   - name: addition_view
     description: "Add two numbers"
     columns:
